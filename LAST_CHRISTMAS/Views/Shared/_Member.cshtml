@@ -1,0 +1,89 @@
+﻿@using LAST_CHRISTMAS.Models
+@model MemberViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Wesołych Świąt @Model.MemberTitle </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Patrick+Hand+SC" rel="stylesheet">  
+</head>
+
+<body class="member @Model.PageIdentity">
+
+    <div class="container">
+        @using (Html.BeginForm())
+        {
+            
+
+            <div class="row" style="margin-top: 100px">
+                <div class="col-md-2 hidden-sm hidden-xs"></div>
+                <div class="col-md-8 col-xs-12 question-box">
+                    @RenderBody()
+
+                    @if (!Model.IsSuccess)
+                    {
+                        <audio autoplay>
+                            <source src="~/Content/Sounds/@(Model.PageIdentity).mp3" type="audio/mpeg">
+                            Zmień przeglądarkę bo inaczej nie odgadniesz wszystkiego!!!
+                        </audio>
+                        <div class="row answer-form">
+                            <div class="col-md-3">
+                                <img src="~/Content/Images/santa.png" data-toggle="modal" data-target="#solution" />
+                            </div>
+                            <div class="col-md-9" style="padding-top: 50px;">
+                                @{
+                                    string classes = "form-control answer-textbox";
+                                    if (Model.IsError)
+                                    {
+                                        classes += " form-has-error";
+                                    }
+
+                                    @Html.TextBoxFor(m => m.GivenAnswer, new { @class = classes })
+                                    <button type="submit" class="btn btn-lg btn-danger" style="margin-top: 10px">Zatwierdź odpowiedź</button>
+                                }
+
+                            </div>
+
+                        </div>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("Index")" class="btn btn-lg btn-success">Przejdź dalej</a> 
+                                    }
+                </div>
+                <div class="col-md-2 hidden-sm hidden-xs"></div>
+            </div>
+
+
+
+                                    }
+    </div>
+
+    <div class="modal fade" id="solution" tabindex="-1" role="dialog" aria-labelledby="solutionLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="solutionLabel">Podpowiedź</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="~/Content/Images/solutions/@(Model.PageIdentity).png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

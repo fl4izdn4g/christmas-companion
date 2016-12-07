@@ -1,0 +1,26 @@
+﻿@using LAST_CHRISTMAS.Models
+@model MemberViewModel
+@{
+    ViewBag.Title = "adhidye";
+    Layout = "~/Views/Shared/_Member.cshtml";
+}
+
+@if (!Model.IsSuccess)
+{
+    <h2 class="merry-title">Wesołych Świąt @Model.MemberTitle :)</h2>
+
+    <p class="question-description">
+        Socrealizm w sztuce, w architekturze i literaturze polskiej niestety dotarł też do Poznania.
+        W 1949 r. przy ulicy Święty Marcin, głównej ulicy centrum Poznania, stanął pierwszy socrealistyczny budynek w stolicy Wielkopolski, czyli gmach Komitetu Wojewódzkiego PZPR. Budynek powstał przy skrzyżowaniu ulic: Św. Marcin i Kościuszki. 
+    </p>
+    <p class="question">
+        Jaki budynek znajdował się tam wcześniej?
+    </p>
+}
+else
+{
+    <h2 class="merry-title">Gratulacje!!!</h2>
+    <div class="prize-container">
+        <img src="~/Content/Images/prizes/@(Model.Letter).png" />
+    </div>
+}

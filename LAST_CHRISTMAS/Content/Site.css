@@ -1,0 +1,143 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+h1.happy-birthday {
+    /*font-family: 'Parisienne', cursive;
+    font-family: 'Clicker Script', cursive;*/
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 5em;
+}
+
+h2.merry-title {
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 4em;
+}
+
+p.task-description {
+    font-size: 1.25em;
+    font-family: 'Lato', sans-serif;
+}
+
+.member {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #222;
+}
+
+.locked {
+    color: orange;
+}
+
+.unlocked {
+    color: yellowgreen;
+}
+
+body.member {
+    margin: 0;
+    padding: 0;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: top left;
+    height: 100%;
+    width: 100%;
+}
+
+
+body.adhidye {
+    background-image:url(Images/pexels-photo-139517.jpg);
+}
+
+body.zspcddk {
+    background-image:url(Images/pexels-photo-179845.jpg);
+}
+
+body.mospsgg {
+    background-image:url(Images/pexels-photo-48693.jpg);
+}
+
+body.tszmnbo {
+    background-image:url(Images/pexels-photo-70234.jpg);
+}
+
+
+.question-box {
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    font-family: 'Lato', sans-serif;
+}
+
+.question-description {
+    font-family: 'Lato', sans-serif;
+    color: #777;
+    text-transform: none;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+.question {
+    font-size: 2em;
+    text-transform: none;
+}
+
+.answer-form {
+    margin-top: 20px;
+}
+
+.answer-textbox {
+    font-size: 1.5em;
+    height: 40px;
+    max-width: 400px;
+}
+
+.form-has-error {
+    background-color: #f26767;
+    border: 2px solid #ff3f3f;
+}
+
+.prize-container {
+    text-align: center;
+}
+
+.prize-container img {
+    max-height: 300px;
+}
+
+.band-element {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 3px;
+    background: #ff4600;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.band-element[data-state=checked] {
+    background: #aaa;
+}

@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "zlnublk";
+    Layout = "~/Views/Shared/_All.cshtml";
+}
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/all_members.js"></script>
+    
+}
+
+<h2>Witajcie w drugim etapie</h2>
+
+<audio autoplay>
+    <source src="~/Content/Sounds/do_they_know1.mp3" type="audio/mpeg">
+    Zmień przeglądarkę bo inaczej nie odgadniesz wszystkiego!!!
+</audio>
+
+<h2 id="codeValue"></h2>
+@foreach(KeyValuePair<int,string> keypair in ViewBag.Bands)
+{
+    <div class="band-element" data-id="@keypair.Key" data-state="unchecked">@keypair.Value</div>
+}

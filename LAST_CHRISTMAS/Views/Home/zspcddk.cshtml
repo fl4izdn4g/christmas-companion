@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "zspcddk";
+    Layout = "~/Views/Shared/_Member.cshtml";
+}
+
+@if (!Model.IsSuccess)
+{
+    <h2 class="merry-title">Wesołych Świąt @Model.MemberTitle :)</h2>
+
+    <p class="question-description">
+        Ten najniebezpieczniejszy na świecie związek chemiczny oprócz swojej najbardziej popularnej nazwy posiada również inną poprawną ale mniej wykorzystywaną. Pierwsze żartobliwe wzmianki tej nazwy pojawiły się w 1990 roku za sprawą studentów pewnego uniwersytetu.
+    </p>
+    <p class="question">
+        Jaki to uniwersytet?
+    </p>
+}
+else
+{
+    <h2 class="merry-title">Gratulacje!!!</h2>
+    <div class="prize-container">
+        <img src="~/Content/Images/prizes/@(Model.Letter).png" />
+    </div>
+}

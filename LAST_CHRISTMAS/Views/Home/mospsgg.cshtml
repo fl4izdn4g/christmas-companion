@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "mospsgg";
+    Layout = "~/Views/Shared/_Member.cshtml";
+}
+
+@if (!Model.IsSuccess)
+{
+    <h2 class="merry-title">Wesołych Świąt @Model.MemberTitle :)</h2>
+
+    <p class="question-description">
+        Harley Quinn po raz pierwszy pojawiła się w pewnym serialu animowanym w odcinku pod tytułem "Joker's Favor". Serial ten w wielu kręgach stał się kultowy ze względu na mroczny charakter oraz stylistykę noir. Każdy kto go oglądał zna bardzo charakterystyczną czołówkę wraz z zapadającym w pamięć utworem wprowadzającym.
+    </p>
+    <p class="question">
+        Jak nazywa się kompozytor, który skomponował utwór wprowadzający?
+    </p>
+}
+else
+{
+    <h2 class="merry-title">Gratulacje!!!</h2>
+    <div class="prize-container">
+        <img src="~/Content/Images/prizes/@(Model.Letter).png" />
+    </div>
+}

@@ -1,0 +1,76 @@
+﻿@using LAST_CHRISTMAS.Models
+@model HomeIndexViewModel
+@{
+
+}
+<div class="row">
+    <div class="col-md-4" style="text-align:center">
+        <img src="~/Content/Images/og.png" />
+    </div>
+    <div class="col-md-6">
+        <div class="row" style="margin-bottom: 30px">
+            <h1 class="happy-birthday">Wesołych świąt agenci</h1>
+            <p class="task-description">Święty Mikołaj jak co roku przychodzi do grzecznych dzieci i rozdaje prezenty. W tym roku postanowił również odwiedzić Was, a ponieważ jesteście agentami postanowił zrealizować dla Was małą niespodziankę.</p>
+        </div>
+        <div class="row" style="font-size: 2em; margin-bottom: 40px; background-color: #fff; padding: 20px; border-radius: 5px;">
+            <div class="row" style="margin-bottom: 10px">
+                <div class="col-md-6">
+                    @if (Model.AniaUnlocked)
+                    {
+                        <span class="glyphicon glyphicon-ok unlocked"></span>
+                    }
+                    else
+                    {
+                        <span class="glyphicon glyphicon-lock locked"></span>
+                    }
+                    <span class="member">Anna</span>
+                </div>
+                <div class="col-md-6">
+                    @if (Model.JustynaUnlocked)
+                    {
+                        <span class="glyphicon glyphicon-ok unlocked"></span>
+                    }
+                    else
+                    {
+                        <span class="glyphicon glyphicon-lock locked"></span>
+                    }
+                    <span class="member">Justyna</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    @if (Model.PawelUnlocked)
+                    {
+                        <span class="glyphicon glyphicon-ok unlocked"></span>
+                    }
+                    else
+                    {
+                        <span class="glyphicon glyphicon-lock locked"></span>
+                    }
+                    <span class="member">Paweł</span>
+                </div>
+                <div class="col-md-6">
+                    @if (Model.MarcinUnlocked)
+                    {
+                        <span class="glyphicon glyphicon-ok unlocked"></span>
+                    }
+                    else
+                    {
+                        <span class="glyphicon glyphicon-lock locked"></span>
+                    }
+                    <span class="member">Marcin</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @if (Model.UnlockedAll)
+            {
+                <a href="@Url.Action("zlnublk")" type="submit" class="btn btn-lg btn-primary col-md-12">Odblokuj</a>
+            }
+            else
+            {
+                <button type="submit" class="btn btn-lg btn-primary col-md-12 disabled" disabled="disabled">Odblokuj</button>
+            }
+        </div>
+    </div>
+</div>

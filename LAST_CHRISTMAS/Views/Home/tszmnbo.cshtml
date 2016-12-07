@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "tszmnbo";
+    Layout = "~/Views/Shared/_Member.cshtml";
+}
+
+@if (!Model.IsSuccess)
+{
+    <h2 class="merry-title">Wesołych Świąt @Model.MemberTitle :)</h2>
+
+    <p class="question-description">
+        W pewnym serialu w odcinku pod tytułem "eps1.5_br4ve-trave1er.asf" główny bohater znajduje w bagażniku pewnego samochodu niemiłą niespodziankę związaną z jego dziewczyna - dilerką.
+    </p>
+    <p class="question">
+        Jaki kolor miał ten samochód?
+    </p>
+}
+else
+{
+    <h2 class="merry-title">Gratulacje!!!</h2>
+    <div class="prize-container">
+        <img src="~/Content/Images/prizes/@(Model.Letter).png" />
+    </div>
+}
