@@ -7,16 +7,49 @@
     <script type="text/javascript" src="~/Scripts/all_members.js"></script>
     
 }
+<div class="all-container col-md-10 col-md-offset-2">
 
-<h2>Witajcie w drugim etapie</h2>
+    <h2 class="merry-title">Witajcie w drugim etapie</h2>
 
-<audio autoplay>
-    <source src="~/Content/Sounds/do_they_know1.mp3" type="audio/mpeg">
-    Zmień przeglądarkę bo inaczej nie odgadniesz wszystkiego!!!
-</audio>
+    <audio autoplay>
+        <source src="~/Content/Sounds/do_they_know1.mp3" type="audio/mpeg">
+        Zmień przeglądarkę bo inaczej nie odgadniesz wszystkiego!!!
+    </audio>
+        
 
-<h2 id="codeValue"></h2>
-@foreach(KeyValuePair<int,string> keypair in ViewBag.Bands)
-{
-    <div class="band-element" data-id="@keypair.Key" data-state="unchecked">@keypair.Value</div>
-}
+    <div class="row">
+        <div class="col-md-1 lock-container">
+            <span class="glyphicon glyphicon-lock locked" id="bandLock"></span>
+        </div>
+        <div class="col-md-11">
+            <h2><span class="unlock-code">kod odblokowujący:</span> <span id="bandCodeValue"></span></h2>
+            @foreach (KeyValuePair<int, string> keypair in ViewBag.Bands)
+            {
+                <div class="band-element" data-id="@keypair.Key" data-state="unchecked">@keypair.Value</div>
+            }
+
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-md-6 col-md-offset-1">
+            <blockquote class="quote">True friendship is a plant of slow growth, and must undergo and withstand the shocks of adversity, before it is entitled to the appellation.</blockquote>
+            <input type="text" id="giftCodeValue" class="form-control gift-input" />
+        </div>
+        <div class="col-md-1 lock-container gift-lock-container">
+            <span class="glyphicon glyphicon-lock locked" id="giftLock"></span>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-md-2"></div>
+        <div class="col-md-1 lock-container santa-lock-container">
+            <span class="glyphicon glyphicon-lock locked" id="santaLock"></span>
+        </div>
+        <div class="col-md-6 ">
+            <blockquote class="quote">...szukajcie pomocy u św. Mikołaja ;)</blockquote>
+            <input type="text" id="santaCodeValue" class="form-control gift-input" style="max-width: 350px" />
+        </div>
+        
+    </div>
+</div>

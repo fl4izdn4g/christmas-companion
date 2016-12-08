@@ -149,6 +149,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SecretController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -163,6 +164,7 @@
     <Content Include="Content\Images\prizes\gndu.png" />
     <Content Include="Content\Images\prizes\irzk.png" />
     <Content Include="Content\Images\prizes\aefm.png" />
+    <Content Include="Content\Images\santa_claus_and_rudolf.jpg" />
     <Content Include="Content\Images\solutions\tszmnbo.png" />
     <Content Include="Content\Images\amazing-beautiful-beauty-blue.jpg" />
     <Content Include="Content\Images\solutions\adhidye.png" />
@@ -226,7 +228,9 @@
     <Content Include="Views\Home\tjlcdgr.cshtml" />
     <Content Include="Views\Shared\_Gallery.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Secret\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

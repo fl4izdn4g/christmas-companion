@@ -133,11 +133,74 @@ body.tszmnbo {
     padding: 10px;
     margin: 5px;
     border-radius: 3px;
-    background: #ff4600;
+    background: #fff;
     display: inline-block;
     cursor: pointer;
+    color: #666;
+    
+    font-family: 'Lato', sans-serif;
 }
 
 .band-element[data-state=checked] {
-    background: #aaa;
+    background: #B60905;
+    color: #fff;
+}
+
+.all-body {
+    margin: 0;
+    padding: 0;
+    background-repeat:no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-color: #1F5851;
+
+    background-image: url(Images/santa_claus_and_rudolf.jpg);
+}
+
+.lock-container {
+    padding-top: 60px;
+    margin-left: -10px;
+}
+
+.gift-lock-container {
+    padding-top: 0px;
+
+}
+
+.santa-lock-container {
+    padding-top: 10px;
+}
+
+.lock-container span.locked {
+    font-size: 64px;
+    color: #ffc300;
+    display: inline-block;
+}
+
+.lock-container span.unlocked {
+    font-size: 64px;
+    color: yellowgreen;
+    display: inline-block;
+}
+
+
+.unlock-code {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+.quote {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    border: none;
+    padding: 0;
+}
+
+.gift-input {
+    max-width:500px;
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    height: 40px;
 }
